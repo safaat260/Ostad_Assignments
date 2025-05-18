@@ -14,11 +14,11 @@ class flagcard extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 150,
               width: double.infinity,
               child: ClipRRect(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
                 child: Image.asset(
+                  height: 200,
                   countrydetails.countryimage,
                   fit: BoxFit.fill,
                 ),
@@ -41,7 +41,7 @@ class flagcard extends StatelessWidget {
               maxLines: 1,
               softWrap: false,
               countrydetails.subtitle,
-              style: TextStyle(fontSize: 15, color: Colors.grey),
+              style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),
             ElevatedButton(
