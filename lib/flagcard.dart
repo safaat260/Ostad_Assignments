@@ -9,41 +9,39 @@ class flagcard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
+        elevation: 3,
         color: Colors.grey.shade100,
         child: Column(
           children: [
             SizedBox(
               height: 150,
               width: double.infinity,
-              child: Image.asset(countrydetails.countryimage,fit: BoxFit.fill,),
+              child: ClipRRect(
+                borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+                child: Image.asset(
+                  countrydetails.countryimage,
+                  fit: BoxFit.fill,
+                ),
+              ),
             ),
 
             //countryname
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                countrydetails.countryname,
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
+            Text(
+              countrydetails.countryname,
+              style: TextStyle(
+                fontSize: 25,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
               ),
             ),
 
             //countrysubtitle
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                overflow: TextOverflow.ellipsis,
-                maxLines: 1,
-                softWrap: false,
-                countrydetails.subtitle,
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.grey,
-                ),
-              ),
+            Text(
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+              softWrap: false,
+              countrydetails.subtitle,
+              style: TextStyle(fontSize: 15, color: Colors.grey),
             ),
             SizedBox(height: 10),
             ElevatedButton(
@@ -53,7 +51,11 @@ class flagcard extends StatelessWidget {
                 children: [
                   Text(
                     "Explore More",
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black),
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
                   ),
                   Icon(Icons.arrow_forward, size: 20, color: Colors.grey),
                 ],

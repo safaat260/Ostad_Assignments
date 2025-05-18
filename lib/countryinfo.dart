@@ -13,7 +13,7 @@ class Countryinfo {
 }
 
 final List<Countryinfo> countries =[
-  Countryinfo(countryimage: "asset/bd.png", countryname: "Bangladesh", subtitle: "A south asian country"),
+  Countryinfo(countryimage: "asset/bd.png", countryname: "Bangladesh", subtitle: "A south asian country."),
   Countryinfo(countryimage: "asset/Japan.svg.png", countryname: "Japan", subtitle: "Best known for technology and culture"),
   Countryinfo(countryimage: "asset/France.svg.png", countryname: "France", subtitle: "Rich culture"),
   Countryinfo(countryimage: "asset/Italy.svg.png", countryname: "Italy", subtitle: "Best known for food and Architectural Beauty"),

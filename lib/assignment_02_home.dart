@@ -18,12 +18,21 @@ class _assignment_02_homeState extends State<assignment_02_home> {
     // Mobile Size (Pixel size < 768) = 2
 
     int crossAxisCount;
+    double clipReaction;//ratio of height and width
     if (Pixel_Size > 1024) {
       crossAxisCount = 4;
+      clipReaction = 0.95;
     } else if (Pixel_Size >= 768) {
       crossAxisCount = 3;
-    } else {
+      clipReaction = 0.7;
+    }
+    else if(Pixel_Size < 550){
       crossAxisCount = 2;
+      clipReaction = 0.55;
+    }
+    else {
+      crossAxisCount = 2;
+      clipReaction = 0.6;
     }
 
     return Scaffold(
@@ -46,6 +55,7 @@ class _assignment_02_homeState extends State<assignment_02_home> {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount,
           crossAxisSpacing: 5,
+          childAspectRatio: clipReaction,//height and width ratio
           mainAxisSpacing: 20,
         ),
 
