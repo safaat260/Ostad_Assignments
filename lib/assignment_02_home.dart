@@ -28,7 +28,7 @@ class _assignment_02_homeState extends State<assignment_02_home> {
     }
     else if(Pixel_Size < 550){
       crossAxisCount = 2;
-      clipReaction = 0.55;
+      clipReaction = 0.5;
     }
     else {
       crossAxisCount = 2;
