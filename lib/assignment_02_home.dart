@@ -32,14 +32,21 @@ class _assignment_02_homeState extends State<assignment_02_home> {
     }
     else {
       crossAxisCount = 2;
-      clipReaction = 0.6;
+      clipReaction = 0.5;
     }
 
     return Scaffold(
+      drawer: Drawer(
+        backgroundColor: Colors.green,
+      ),
       //appbar
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white, size: 30),
         backgroundColor: Colors.green,
         centerTitle: true,
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.search, size: 35, color: Colors.white,))
+        ],
         title: Text(
           "Assignment 2",
           style: TextStyle(
@@ -48,6 +55,7 @@ class _assignment_02_homeState extends State<assignment_02_home> {
             fontWeight: FontWeight.bold,
           ),
         ),
+
       ),
 
       //gridview

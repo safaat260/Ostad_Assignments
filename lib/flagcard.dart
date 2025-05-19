@@ -50,14 +50,17 @@ class flagcard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "Explore More",
+                    "Book A Ticket",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Colors.blue,
                     ),
                   ),
-                  Icon(Icons.arrow_forward, size: 20, color: Colors.grey),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 5),
+                    child: Icon(Icons.airplane_ticket_outlined, size: 20, color: Colors.blue),
+                  ),
                 ],
               ),
             ),
