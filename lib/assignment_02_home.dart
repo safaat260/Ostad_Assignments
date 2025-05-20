@@ -19,16 +19,12 @@ class _assignment_02_homeState extends State<assignment_02_home> {
 
     int crossAxisCount;
     double clipReaction;//ratio of height and width
-    if (Pixel_Size > 1024) {
+    if (Pixel_Size >= 1024) {
       crossAxisCount = 4;
-      clipReaction = 0.8;
+      clipReaction = 0.7;
     } else if (Pixel_Size >= 768) {
       crossAxisCount = 3;
       clipReaction = 0.7;
-    }
-    else if(Pixel_Size < 550){
-      crossAxisCount = 2;
-      clipReaction = 0.5;
     }
     else {
       crossAxisCount = 2;

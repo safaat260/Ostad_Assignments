@@ -59,7 +59,7 @@ class flagcard extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 5),
-                    child: Icon(Icons.airplane_ticket_outlined, size: 20, color: Colors.blue),
+                    child: Icon(Icons.explore, size: 20, color: Colors.blue),
                   ),
                 ],
               ),
